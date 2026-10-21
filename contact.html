@@ -135,6 +135,9 @@ legend{padding:0;float:left;width:100%}
 .btn-submit:hover{background:#C80010}
 .btn-submit svg{transition:transform .25s ease}
 .btn-submit:hover svg{transform:translateX(4px)}
+/* ボタン文字は中央、矢印は右端に固定（Figmaデザイン準拠） */
+.btn-submit{position:relative;justify-content:center}
+.btn-submit svg{position:absolute;top:50%;right:34px;margin-top:-6px}
 .btn-back{display:inline-flex;align-items:center;justify-content:center;gap:12px;width:min(100%,200px);height:80px;border:1px solid var(--color-line);border-radius:999px;background:#fff;color:var(--color-ink);font:inherit;font-size:15px;font-weight:700;letter-spacing:.1em;cursor:pointer;transition:border-color .25s ease}
 .btn-back:hover{border-color:var(--color-ink)}
 
@@ -284,11 +287,13 @@ legend{padding:0;float:left;width:100%}
   .f-split{grid-template-columns:1fr}
   .choice span{height:44px;font-size:13px;padding:0 16px 0 14px}
   .agree{text-align:left}
-  .agree .choices{justify-content:flex-start}
+  .agree .choices{justify-content:center}
+  .f-row:has(textarea){border-bottom:1px solid var(--color-line)}
   .agree .f-error{text-align:left}
   .f-actions{flex-direction:column-reverse;align-items:stretch}
   .btn-submit,.btn-back{width:100%;height:68px}
   .btn-submit{padding:0 28px}
+  .btn-submit svg{right:28px}
   .btn-more{width:100%;height:64px}
 }
 </style>
