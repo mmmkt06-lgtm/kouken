@@ -57,6 +57,11 @@ ul{list-style:none}
 .btn-cta:hover{background:#C80010}
 .btn-cta:hover svg{transform:translate(2px,-2px)}
 .site-header .btn-cta{width:220px;height:56px;font-size:15px;padding-left:10px}
+/* PC：ヘッダーのボタン文字は中央、矢印は右端に固定（Figmaデザイン準拠） */
+@media (min-width:1024px){
+  .site-header .btn-cta{position:relative;justify-content:center;padding-left:0}
+  .site-header .btn-cta svg{position:absolute;top:50%;right:21.5px;margin-top:-7px}
+}
 .menu-toggle{display:none}
 
 /* ---------- Section commons ---------- */
