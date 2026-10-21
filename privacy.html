@@ -252,6 +252,9 @@ ul{list-style:none}
   .contact__text{font-size:14px;line-height:1.95}
   .contact__mark{right:-38%;height:78%;top:30%}
   .btn-contact{width:100%;height:72px;padding:0 28px;font-size:16px}
+  /* SP：ボタン文字は中央、矢印は右端に固定（Figmaデザイン準拠） */
+  .btn-contact{position:relative;justify-content:center}
+  .btn-contact svg{position:absolute;top:50%;right:28px;margin-top:-8px}
   .site-footer{padding:72px 0 32px}
   .footer__logo{width:200px;margin-left:0}
   .footer__nav{grid-template-columns:1fr;gap:0}

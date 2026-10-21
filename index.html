@@ -423,6 +423,20 @@ ul{list-style:none}
   .contact__text{font-size:14px;line-height:1.95}
   .contact__mark{right:-38%;height:78%;top:30%}
   .btn-contact{width:100%;height:72px;padding:0 28px;font-size:16px}
+  /* SP：ボタン文字は中央、矢印は右端に固定（Figmaデザイン準拠） */
+  .btn-more,.btn-contact{position:relative;justify-content:center}
+  .btn-more svg,.btn-contact svg{position:absolute;top:50%}
+  .btn-more svg{right:32px;margin-top:-8px}
+  .btn-more.works__all svg{right:20px;margin-top:-7px}
+  .btn-contact svg{right:28px;margin-top:-8px}
+  /* SP：理念セクションは 見出し→本文→ビジュアル→ボタン の順（Figmaデザイン準拠） */
+  .philosophy__grid{display:flex;flex-direction:column;align-items:stretch;gap:0}
+  .philosophy__text{display:contents}
+  .philosophy__label{order:1}
+  .philosophy__copy{order:2}
+  .philosophy__statement{order:3}
+  .philo-visual{order:4}
+  .philosophy .btn-more{order:5}
   .site-footer{padding:72px 0 32px}
   .footer__logo{width:200px;margin-left:0}
   .footer__nav{grid-template-columns:1fr;gap:0}
