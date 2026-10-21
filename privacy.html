@@ -127,6 +127,11 @@ ul{list-style:none}
 .btn-contact svg{transition:transform .25s ease}
 .btn-contact:hover{background:var(--color-ink);color:#fff}
 .btn-contact:hover svg{transform:translate(3px,-3px)}
+/* PC：ボタン文字は中央、矢印は右端に固定（Figmaデザイン準拠） */
+@media (min-width:1024px){
+  .btn-contact{position:relative;justify-content:center}
+  .btn-contact svg{position:absolute;top:50%;right:34px;margin-top:-8px}
+}
 /* ---------- Footer ---------- */
 .site-footer{position:relative;overflow:hidden;padding:112px 0 36px;background:#0B0B0B;color:#fff}
 .footer__top{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:var(--col-gap);align-items:start;padding-bottom:80px}
