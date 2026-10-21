@@ -221,6 +221,16 @@ ul{list-style:none}
 .btn-contact svg{transition:transform .25s ease}
 .btn-contact:hover{background:var(--color-ink);color:#fff}
 .btn-contact:hover svg{transform:translate(3px,-3px)}
+/* PC：ボタン文字は中央、矢印は右端に固定（Figmaデザイン準拠） */
+@media (min-width:1024px){
+  .btn-more,.btn-contact,.site-header .btn-cta{position:relative;justify-content:center}
+  .btn-more svg,.btn-contact svg,.site-header .btn-cta svg{position:absolute;top:50%}
+  .btn-more svg{right:26px;margin-top:-8px}
+  .btn-more.works__all svg{right:23px;margin-top:-7px}
+  .btn-contact svg{right:34px;margin-top:-8px}
+  .site-header .btn-cta{padding-left:0}
+  .site-header .btn-cta svg{right:21.5px;margin-top:-7px}
+}
 
 /* ---------- Footer ---------- */
 .site-footer{position:relative;overflow:hidden;padding:112px 0 36px;background:#0B0B0B;color:#fff}
