@@ -53,8 +53,6 @@ ul{list-style:none}
 .opening__bar::after{content:"";position:absolute;inset:0;background:var(--color-red);transform:scaleX(0);transform-origin:left;animation:opBar 1s cubic-bezier(.7,0,.2,1) .3s forwards}
 .op .site-header{animation:opHeader .8s cubic-bezier(.2,.7,.2,1) 2.05s both}
 .op .nfv__marquee{animation:opRise 1.2s cubic-bezier(.2,.7,.2,1) 2s both}
-.op .nfv__line{animation:opRise 1s cubic-bezier(.2,.7,.2,1) 2.1s both}
-.op .nfv__line + .nfv__line{animation-delay:2.22s}
 @keyframes opWipe{to{clip-path:inset(0 0 100% 0)}}
 @keyframes opLogo{from{opacity:0;transform:translate(-50%,-30%)}to{opacity:1;transform:translate(-50%,-50%)}}
 @keyframes opBar{to{transform:scaleX(1)}}
@@ -83,8 +81,8 @@ ul{list-style:none}
 .nfv__art{position:absolute;inset:0;width:100%;height:100%}
 .nfv__stage{position:absolute;z-index:4;left:0;top:50%;width:max(100cqw,calc(100cqh * 1440 / 860));aspect-ratio:1440/860;transform:translateY(-50%);container-type:inline-size;pointer-events:none}
 .nfv__copy{position:absolute;left:7.08%;top:59.2%;margin:0;font-family:"Noto Sans JP",var(--font-ja);font-size:4.57cqi;font-weight:900;line-height:1.24;letter-spacing:.04em;color:#fff}
-.nfv__line{display:block;width:fit-content;padding:.12em .37em .04em;background:var(--color-ink);white-space:nowrap}
-.nfv__line + .nfv__line{margin-top:.12em;padding-top:.03em}
+.nfv__line{display:block;width:fit-content;padding:.08em .37em;background:var(--color-ink);white-space:nowrap}
+.nfv__line + .nfv__line{margin-top:.12em}
 .nfv__copy small{font-size:.8em}
 .nfv__copy .m{font-size:.9em}
 .nfv__copy .p{letter-spacing:-.29em}
@@ -96,6 +94,12 @@ ul{list-style:none}
 @media (prefers-reduced-motion:no-preference){
   .nfv__pic.is-active{transform-box:fill-box;transform-origin:50% 50%;animation:nfvZoom 9s ease-out both}
   .nfv__track{animation:nfvSlide 36s linear infinite}
+  /* catchphrase: each band wipes in from the left, the text follows */
+  .nfv__line{animation:nfvWipe .9s cubic-bezier(.7,0,.2,1) .3s both}
+  .nfv__line + .nfv__line{animation-delay:.45s}
+  .op .nfv__line{animation-delay:2.05s}
+  .op .nfv__line + .nfv__line{animation-delay:2.2s}
+  @keyframes nfvWipe{from{clip-path:inset(0 100% 0 0);transform:translateX(-24px)}to{clip-path:inset(0 0 0 0);transform:none}}
   @keyframes nfvSlide{to{transform:translateX(-50%)}}
   @keyframes nfvZoom{from{transform:scale(1.08)}}
 }
