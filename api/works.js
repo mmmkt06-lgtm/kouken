@@ -1,6 +1,6 @@
 // Vercel Function: microCMS の works API を中継する。
 // APIキーは環境変数 MICROCMS_API_KEY（サーバー側のみ）で管理する。
-const CATEGORIES = ['解体工事', '足場工事', '鉄骨工事', '鍛冶工事', '機械器具設置工事'];
+const CATEGORIES = ['各種プラント工事', '機械基部設置工事', '機械メンテナンス工事', '鍛冶工事一式', '足場工事一式', '解体工事一式'];
 const FIELDS = 'id,title,category,date,image,area,summary';
 
 module.exports = async function handler(req, res) {
