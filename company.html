@@ -48,7 +48,19 @@ ul{list-style:none}
 .site-header__logo{flex:none;display:block;width:250px}
 .site-header__logo img{width:100%;height:auto}
 .gnav{margin-left:auto;display:flex;align-items:center}
-.gnav__list{display:flex;gap:40px;margin-right:50px}
+.gnav__list{display:flex;gap:40px;margin-right:36px}
+.gnav__sns{display:flex;gap:10px;margin-right:28px}
+.gnav__sns a{display:grid;place-items:center;width:38px;height:38px;border:1px solid var(--color-line);border-radius:50%;color:var(--color-ink);transition:background-color .25s ease,color .25s ease,border-color .25s ease}
+.gnav__sns a:hover{background:var(--color-ink);border-color:var(--color-ink);color:#fff}
+.gnav__sns a:focus-visible{outline:2px solid var(--color-red);outline-offset:3px}
+.gnav__list a{white-space:nowrap}
+/* narrow desktop: tighten spacing so logo, nav, icons and CTA all fit on one line */
+@media (min-width:1024px) and (max-width:1279px){
+  .gnav__list{gap:26px;margin-right:22px}
+  .gnav__sns{gap:8px;margin-right:18px}
+  .gnav__sns a{width:34px;height:34px}
+  .site-header .btn-cta{width:190px}
+}
 .gnav__list a{font-size:15px;font-weight:700;letter-spacing:.06em;line-height:1;position:relative;padding:10px 0}
 .gnav__list a{transition:color .3s ease}
 .gnav__list a:hover{color:var(--color-red)}
@@ -173,6 +185,10 @@ ul{list-style:none}
 .footer__info dd{color:rgba(255,255,255,.55)}
 .footer__info dd.is-set{color:#fff}
 .footer__info dd.is-set a{color:inherit;text-decoration:none}
+.footer__sns{display:flex;gap:12px;margin-top:24px}
+.footer__sns a{display:grid;place-items:center;width:44px;height:44px;border:1px solid rgba(255,255,255,.45);border-radius:50%;color:#fff;transition:background-color .25s ease,color .25s ease,border-color .25s ease}
+.footer__sns a:hover{background:#fff;border-color:#fff;color:var(--color-ink)}
+.footer__sns a:focus-visible{outline:2px solid #fff;outline-offset:3px}
 .footer__nav{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
 .footer__nav li{border-top:1px solid rgba(255,255,255,.16)}
 .footer__nav li:nth-last-child(-n+2){border-bottom:1px solid rgba(255,255,255,.16)}
@@ -191,6 +207,11 @@ ul{list-style:none}
 .drawer__list a{display:flex;justify-content:space-between;align-items:baseline;padding:22px 4px;font-size:20px;font-weight:700;letter-spacing:.08em}
 .drawer__list .en{font-size:16px;font-weight:600;text-transform:uppercase;color:var(--color-gray);letter-spacing:.06em}
 .drawer .btn-cta{margin-top:40px;height:64px;font-size:16px}
+.drawer__sns{display:flex;align-items:center;gap:12px;margin-top:32px}
+.drawer__sns::before{content:"Follow us";margin-right:6px;font-family:var(--font-en);font-size:14px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--color-gray)}
+.drawer__sns a{display:grid;place-items:center;width:48px;height:48px;border:1px solid var(--color-line);border-radius:50%;color:var(--color-ink);transition:background-color .25s ease,color .25s ease,border-color .25s ease}
+.drawer__sns a:hover{background:var(--color-ink);border-color:var(--color-ink);color:#fff}
+.drawer__sns a:focus-visible{outline:2px solid var(--color-red);outline-offset:3px}
 
 /* ---------- Toast ---------- */
 .toast{position:fixed;z-index:60;left:50%;bottom:32px;transform:translate(-50%,16px);background:var(--color-ink);color:#fff;font-size:13px;line-height:1.6;padding:14px 22px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;max-width:calc(100% - 40px);text-align:center}
@@ -252,7 +273,7 @@ ul{list-style:none}
   :root{--gutter:40px;--section-y:clamp(88px,12vw,120px);--head-gap:44px;--col-gap:40px;--header-h:68px;--header-top:16px;--header-x:16px}
   .site-header{padding:0 12px 0 32px}
   .site-header__logo{width:200px}
-  .gnav__list{display:none}
+  .gnav__list,.gnav__sns{display:none}
   .site-header .btn-cta{width:auto;height:46px;padding:0 22px;font-size:14px;gap:12px}
   .menu-toggle{display:inline-flex;flex-direction:column;justify-content:center;align-items:center;gap:7px;width:46px;height:46px;margin-left:10px;border:0;border-radius:50%;background:var(--color-red);cursor:pointer;transition:background-color .2s ease}
   .menu-toggle:hover{background:#C80010}
@@ -324,6 +345,7 @@ ul{list-style:none}
       <li><a href="company.html" aria-current="page">会社概要</a></li>
       <li><a href="works.html">施工実績</a></li>
     </ul>
+    <ul class="gnav__sns" aria-label="公式SNS"><li><a href="https://www.instagram.com/kouken_4510/" target="_blank" rel="noopener noreferrer" aria-label="Instagram（新しいタブで開きます）"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></li><li><a href="https://www.threads.com/@kouken_4510" target="_blank" rel="noopener noreferrer" aria-label="Threads（新しいタブで開きます）"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.277 2.65Zm1.003-11.69c-.242 0-.487.007-.739.021-1.836.103-2.98.946-2.916 2.143.067 1.256 1.452 1.839 2.784 1.767 1.224-.065 2.818-.543 3.086-3.71a10.5 10.5 0 0 0-2.215-.221z"/></svg></a></li></ul>
     <a class="btn-cta" href="contact.html">お問い合わせ
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 12 12 2M4.5 2H12v7.5" stroke="currentColor" stroke-width="1.4"/></svg>
     </a>
@@ -340,6 +362,7 @@ ul{list-style:none}
   <a class="btn-cta" href="contact.html">お問い合わせ
     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 12 12 2M4.5 2H12v7.5" stroke="currentColor" stroke-width="1.4"/></svg>
   </a>
+  <ul class="drawer__sns" aria-label="公式SNS"><li><a href="https://www.instagram.com/kouken_4510/" target="_blank" rel="noopener noreferrer" aria-label="Instagram（新しいタブで開きます）"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></li><li><a href="https://www.threads.com/@kouken_4510" target="_blank" rel="noopener noreferrer" aria-label="Threads（新しいタブで開きます）"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.277 2.65Zm1.003-11.69c-.242 0-.487.007-.739.021-1.836.103-2.98.946-2.916 2.143.067 1.256 1.452 1.839 2.784 1.767 1.224-.065 2.818-.543 3.086-3.71a10.5 10.5 0 0 0-2.215-.221z"/></svg></a></li></ul>
 </div>
 <main id="main">
   <section class="page-hero" aria-labelledby="page-title">
@@ -435,6 +458,7 @@ ul{list-style:none}
           <div><dt>営業所</dt><dd class="is-set">〒802-0805<br>福岡県北九州市小倉南区八幡町9-17</dd></div>
           <div><dt>TEL</dt><dd class="is-set"><a href="tel:0932331479">093-233-1479</a></dd></div>
         </dl>
+        <ul class="footer__sns" aria-label="公式SNS"><li><a href="https://www.instagram.com/kouken_4510/" target="_blank" rel="noopener noreferrer" aria-label="Instagram（新しいタブで開きます）"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></li><li><a href="https://www.threads.com/@kouken_4510" target="_blank" rel="noopener noreferrer" aria-label="Threads（新しいタブで開きます）"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.277 2.65Zm1.003-11.69c-.242 0-.487.007-.739.021-1.836.103-2.98.946-2.916 2.143.067 1.256 1.452 1.839 2.784 1.767 1.224-.065 2.818-.543 3.086-3.71a10.5 10.5 0 0 0-2.215-.221z"/></svg></a></li></ul>
       </div>
       <nav aria-label="フッターナビゲーション">
         <ul class="footer__nav">
