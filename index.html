@@ -3,8 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>KOUKEN株式会社</title>
-<meta name="description" content="KOUKEN株式会社は、プラント・機械据付・メンテナンス・鍛冶・足場・解体工事に対応しています。工事に関するご相談・お見積もりはお問い合わせください。">
+<title>KOUKEN株式会社｜北九州のプラント・機械据付・メンテナンス工事</title>
+<meta name="description" content="北九州市のKOUKEN株式会社は、プラント工事・機械器具設置・機械メンテナンス・鍛冶・足場・解体工事を手がける会社です。北九州を、現場から支える。工事のご相談・お見積もりはお気軽にお問い合わせください。">
+<meta name="theme-color" content="#E50012">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:site_name" content="KOUKEN株式会社">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KOUKEN株式会社｜北九州のプラント・機械据付・メンテナンス工事">
+<meta property="og:description" content="北九州市のKOUKEN株式会社は、プラント工事・機械器具設置・機械メンテナンス・鍛冶・足場・解体工事を手がける会社です。北九州を、現場から支える。工事のご相談・お見積もりはお気軽にお問い合わせください。">
+<meta property="og:image" content="img/ogp.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="北九州を、現場から支える。KOUKEN株式会社">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;900&family=LINE+Seed+JP:wght@400;700;800&display=swap" rel="stylesheet">
@@ -105,9 +119,9 @@ ul{list-style:none}
 .nfv__copy .p{letter-spacing:-.29em}
 .nfv__pic{opacity:0;transition:opacity 1.2s ease}
 /* scroll cue: bottom right of the FV */
-.nfv__scroll{position:absolute;z-index:5;right:4.4cqw;bottom:6.5cqh;display:flex;flex-direction:column;align-items:center;gap:12px;padding:6px;color:#fff;text-decoration:none}
-.nfv__scroll-txt{writing-mode:vertical-rl;font-family:var(--font-en);font-size:12px;font-weight:600;line-height:1;letter-spacing:.24em;text-transform:uppercase}
-.nfv__scroll-line{position:relative;display:block;width:1px;height:96px;background:rgba(255,255,255,.35);overflow:hidden}
+.nfv__scroll{position:absolute;z-index:5;right:4.4cqw;bottom:6.5cqh;display:flex;flex-direction:column;align-items:center;gap:16px;padding:6px;color:#fff;text-decoration:none;filter:drop-shadow(0 1px 6px rgba(0,0,0,.45))}
+.nfv__scroll-txt{writing-mode:vertical-rl;font-family:var(--font-en);font-size:15px;font-weight:700;line-height:1;letter-spacing:.3em;text-transform:uppercase}
+.nfv__scroll-line{position:relative;display:block;width:2px;height:140px;background:rgba(255,255,255,.55);overflow:hidden}
 .nfv__scroll-line i{position:absolute;left:0;top:0;width:100%;height:40%;background:var(--color-red)}
 .nfv__scroll:focus-visible{outline:2px solid #fff;outline-offset:2px}
 .nfv__pic.is-active{opacity:1}
@@ -134,7 +148,8 @@ ul{list-style:none}
   .nfv__art{position:relative;height:auto;aspect-ratio:390/450;max-height:78vh}
   .nfv__copy{left:var(--gutter);bottom:5vw;font-size:10.6vw}
   .nfv__scroll{right:calc(var(--gutter) - 6px);bottom:5vw}
-  .nfv__scroll-line{height:76px}
+  .nfv__scroll-txt{font-size:13px}
+  .nfv__scroll-line{height:96px}
 }
 /* SP: the photo fills the whole FV (no lens / band) and a much bolder headline cuts across its bottom */
 @media (max-width:767px){
@@ -146,7 +161,9 @@ ul{list-style:none}
   .nfv__br{display:inline}
   .nfv__tag{font-size:max(.16em,12px);margin-bottom:.6em}
   .nfv::after{background:linear-gradient(to top,rgba(12,14,20,.38) 0%,rgba(12,14,20,.22) 32%,rgba(12,14,20,0) 62%),rgba(12,14,20,.3)}
-  .nfv__scroll{right:calc(var(--gutter) - 6px);bottom:max(26px,3.5svh)}
+  .nfv__scroll{right:calc(var(--gutter) - 6px);bottom:max(26px,3.5svh);gap:12px}
+  .nfv__scroll-txt{font-size:12px;letter-spacing:.24em}
+  .nfv__scroll-line{height:76px}
 }
 }
 
