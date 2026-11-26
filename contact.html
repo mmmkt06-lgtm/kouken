@@ -9,11 +9,13 @@
 <link rel="icon" href="favicon.ico" sizes="32x32">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://kouken-inc.com/contact">
+<meta property="og:url" content="https://kouken-inc.com/contact">
 <meta property="og:site_name" content="KOUKEN株式会社">
 <meta property="og:type" content="article">
 <meta property="og:title" content="お問い合わせ｜KOUKEN株式会社">
 <meta property="og:description" content="北九州市のKOUKEN株式会社へのお問い合わせフォームです。プラント・機械据付・メンテナンス・鍛冶・足場・解体工事のご相談・お見積もりを承ります。">
-<meta property="og:image" content="img/ogp.jpg">
+<meta property="og:image" content="https://kouken-inc.com/img/ogp.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="北九州を、現場から支える。KOUKEN株式会社">
@@ -157,6 +159,8 @@ legend{padding:0;float:left;width:100%}
 .agree .choices{justify-content:center;margin-top:20px}
 .agree .f-error{text-align:center}
 .f-actions{display:flex;justify-content:center;gap:16px;margin-top:48px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.btn-submit[disabled]{opacity:.6;cursor:progress}
 .btn-submit{display:inline-flex;align-items:center;justify-content:space-between;gap:32px;width:min(100%,360px);height:80px;padding:0 40px;border:0;border-radius:999px;background:var(--color-red);color:#fff;font:inherit;font-size:16px;font-weight:700;letter-spacing:.1em;cursor:pointer;transition:background-color .25s ease}
 .btn-submit:hover{background:#C80010}
 .btn-submit svg{transition:transform .25s ease}
@@ -428,6 +432,7 @@ legend{padding:0;float:left;width:100%}
             <div class="f-field"><textarea id="f-message" name="message" required placeholder="工事の内容、建物の規模・構造、ご希望の時期など、わかる範囲でご記入ください。" aria-describedby="message-err"></textarea><p class="f-error" id="message-err" role="alert"></p></div>
           </div>
 
+          <div class="hp" aria-hidden="true"><label>このフィールドは入力しないでください<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
           <div class="agree">
             <p class="agree__text">送信いただく個人情報は、お問い合わせへの回答のためにのみ使用します。<br><a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>をご確認のうえ、同意いただける場合はチェックを入れてください。</p>
             <div class="choices"><label class="choice"><input type="checkbox" name="agree" value="同意する" id="f-agree" aria-describedby="agree-err"><span>プライバシーポリシーに同意する</span></label></div>
@@ -509,7 +514,7 @@ legend{padding:0;float:left;width:100%}
   window.addEventListener('resize',function(){if(window.innerWidth>=1024)setMenu(false)});
 
   var toast=document.querySelector('.toast'), tt;
-  function showToast(msg){ toast.textContent=msg; toast.classList.add('is-show'); clearTimeout(tt); tt=setTimeout(function(){toast.classList.remove('is-show')},3200); }
+  function showToast(msg,ms){ toast.textContent=msg; toast.classList.add('is-show'); clearTimeout(tt); tt=setTimeout(function(){toast.classList.remove('is-show')},ms||3200); }
   document.addEventListener('click',function(e){
     var a=e.target.closest('a[data-pending]'); if(!a) return;
     e.preventDefault(); showToast(a.getAttribute('data-pending')+'は現在準備中です。');
@@ -565,10 +570,18 @@ legend{padding:0;float:left;width:100%}
     go(pConfirm,1);
   });
   pConfirm.querySelector('[data-back]').addEventListener('click',function(){ go(form,0); });
-  pConfirm.querySelector('[data-send]').addEventListener('click',function(){
-    /* 送信処理は未接続（メール送信・フォームサービスの決定後に接続） */
-    go(pDone,2);
-    showToast('デモ表示のため、実際には送信されていません。');
+  var sendBtn=pConfirm.querySelector('[data-send]'), sending=false;
+  sendBtn.addEventListener('click',function(){
+    if(sending) return; sending=true;
+    var label=sendBtn.firstChild.nodeValue; sendBtn.disabled=true; sendBtn.firstChild.nodeValue='送信中…';
+    var data={type:value('type'),works:[].filter.call(form.querySelectorAll('[name="works"]'),function(e){return e.checked}).map(function(e){return e.value}),
+      company:value('company'),name:value('name'),kana:value('kana'),email:value('email'),tel:value('tel'),site:value('site'),message:value('message'),
+      agree:document.getElementById('f-agree').checked,website:value('website')};
+    fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function(){ form.reset(); go(pDone,2); })
+      .catch(function(){ showToast('送信できませんでした。時間をおいて再度お試しいただくか、お電話（093-233-1479）でお問い合わせください。',7000); })
+      .then(function(){ sending=false; sendBtn.disabled=false; sendBtn.firstChild.nodeValue=label; });
   });
 })();
 </script>
