@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>施工事例｜KOUKEN株式会社</title>
-<meta name="description" content="KOUKEN株式会社の施工事例。プラント工事・機械基部設置・機械メンテナンス・鍛冶・足場・解体工事の実績をご紹介します。">
+<meta name="description" content="KOUKEN株式会社の施工事例。プラント工事・機械器具設置・機械メンテナンス・鍛冶・足場・解体工事の実績をご紹介します。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=LINE+Seed+JP:wght@400;700;800&display=swap" rel="stylesheet">
@@ -109,6 +109,11 @@ ul{list-style:none}
 .works-status{margin-top:28px;font-size:13px;color:var(--color-gray);letter-spacing:.06em}
 .works-grid{margin-top:32px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:56px clamp(24px,2.6vw,40px)}
 .works-grid li[hidden]{display:none}
+.filter[hidden],.works-status[hidden],.works-grid[hidden]{display:none}
+.works-soon{margin-top:40px;padding:72px 24px;border-radius:16px;background:#F4F4F4;text-align:center}
+.works-soon__en{font-family:var(--font-en);font-weight:700;font-size:clamp(32px,4vw,56px);line-height:1;letter-spacing:.06em;color:#C8C8C8;text-transform:uppercase}
+.works-soon__text{margin-top:20px;font-size:16px;font-weight:700;letter-spacing:.08em}
+.works-soon__sub{margin-top:8px;font-size:14px;line-height:1.8;color:var(--color-gray);letter-spacing:.06em}
 .wcard__ph{position:relative;aspect-ratio:4/3;border-radius:0;overflow:hidden;background-color:#ECECEC;background-image:repeating-linear-gradient(-56deg,transparent 0 22px,rgba(255,255,255,.55) 22px 23px)}
 .wcard__badge{position:absolute;top:14px;left:14px;background:#fff;font-size:11px;font-weight:700;letter-spacing:.1em;padding:6px 12px;line-height:1;border-radius:4px}
 .wcard__phlabel{position:absolute;left:18px;bottom:16px;font-family:var(--font-en);font-weight:600;font-size:14px;letter-spacing:.16em;color:var(--color-gray)}
@@ -346,143 +351,10 @@ ul{list-style:none}
 
   <section class="works-body" aria-label="施工事例一覧">
     <div class="container">
-      <div class="filter" role="group" aria-label="工事の種類で絞り込む"><button type="button" data-filter="all" aria-pressed="true">すべて<span class="count">12</span></button><button type="button" data-filter="各種プラント工事" aria-pressed="false">各種プラント工事<span class="count">2</span></button><button type="button" data-filter="機械基部設置工事" aria-pressed="false">機械基部設置工事<span class="count">2</span></button><button type="button" data-filter="機械メンテナンス工事" aria-pressed="false">機械メンテナンス工事<span class="count">2</span></button><button type="button" data-filter="鍛冶工事一式" aria-pressed="false">鍛冶工事一式<span class="count">2</span></button><button type="button" data-filter="足場工事一式" aria-pressed="false">足場工事一式<span class="count">2</span></button><button type="button" data-filter="解体工事一式" aria-pressed="false">解体工事一式<span class="count">2</span></button></div>
-      <p class="works-status" aria-live="polite"><span data-status>すべて：12件</span></p>
-      <ul class="works-grid">
-          <li data-cat="各種プラント工事">
-            <article class="wcard" aria-label="施工事例（各種プラント工事）">
-              <div class="wcard__ph"><span class="wcard__badge">掲載準備中</span><span class="wcard__phlabel">PHOTO</span></div>
-              <p class="wcard__tags"><span class="wcard__cat">各種プラント工事</span></p>
-              <h2 class="wcard__title">プラント設備の設置・組立工事</h2>
-              <dl class="wcard__meta">
-                <div><dt>施工エリア</dt><dd>北九州市および周辺地域</dd></div>
-                <div><dt>工事概要</dt><dd>プラント設備の搬入から設置・組立までを、安全第一で進める工事です。</dd></div>
-              </dl>
-            </article>
-          </li>
-          <li data-cat="機械基部設置工事">
-            <article class="wcard" aria-label="施工事例（機械基部設置工事）">
-              <div class="wcard__ph"><span class="wcard__badge">掲載準備中</span><span class="wcard__phlabel">PHOTO</span></div>
-              <p class="wcard__tags"><span class="wcard__cat">機械基部設置工事</span></p>
-              <h2 class="wcard__title">各種産業機械の搬入据付工事</h2>
-              <dl class="wcard__meta">
-                <div><dt>施工エリア</dt><dd>北九州市および周辺地域</dd></div>
-                <div><dt>工事概要</dt><dd>各種産業機械・設備の搬入と据付を、基礎や水平を確認しながら行う工事です。</dd></div>
-              </dl>
-            </article>
-          </li>
-          <li data-cat="機械メンテナンス工事">
-            <article class="wcard" aria-label="施工事例（機械メンテナンス工事）">
-              <div class="wcard__ph"><span class="wcard__badge">掲載準備中</span><span class="wcard__phlabel">PHOTO</span></div>
-              <p class="wcard__tags"><span class="wcard__cat">機械メンテナンス工事</span></p>
-              <h2 class="wcard__title">各種機械設備のメンテナンス工事</h2>
-              <dl class="wcard__meta">
-                <div><dt>施工エリア</dt><dd>北九州市および周辺地域</dd></div>
-                <div><dt>工事概要</dt><dd>設備や機械の点検・整備・部品交換を行い、安定した稼働を支える工事です。</dd></div>
-              </dl>
-            </article>
-          </li>
-          <li data-cat="鍛冶工事一式">
-            <article class="wcard" aria-label="施工事例（鍛冶工事一式）">
-              <div class="wcard__ph"><span class="wcard__badge">掲載準備中</span><span class="wcard__phlabel">PHOTO</span></div>
-              <p class="wcard__tags"><span class="wcard__cat">鍛冶工事一式</span></p>
-              <h2 class="wcard__title">鉄骨・金物の溶接取付工事</h2>
-              <dl class="wcard__meta">
-                <div><dt>施工エリア</dt><dd>北九州市および周辺地域</dd></div>
-                <div><dt>工事概要</dt><dd>鉄骨や金物の溶接・取り付け・補強を、現場の状況に合わせて行う工事です。</dd></div>
-              </dl>
-            </article>
-          </li>
-          <li data-cat="足場工事一式">
-            <article class="wcard" aria-label="施工事例（足場工事一式）">
-              <div class="wcard__ph"><span class="wcard__badge">掲載準備中</span><span class="wcard__phlabel">PHOTO</span></div>
-              <p class="wcard__tags"><span class="wcard__cat">足場工事一式</span></p>
-              <h2 class="wcard__title">足場の組立・解体工事</h2>
-              <dl class="wcard__meta">
-                <div><dt>施工エリア</dt><dd>北九州市および周辺地域</dd></div>
-                <div><dt>工事概要</dt><dd>新築・改修・プラントなどの現場で、足場の組立から解体までを一式で行います。</dd></div>
-              </dl>
-            </article>
-          </li>
-          <li data-cat="解体工事一式">
-            <article class="wcard" aria-label="施工事例（解体工事一式）">
-              <div class="wcard__ph"><span class="wcard__badge">掲載準備中</span><span class="wcard__phlabel">PHOTO</span></div>
-              <p class="wcard__tags"><span class="wcard__cat">解体工事一式</span></p>
-              <h2 class="wcard__title">建物内装・設備の解体工事</h2>
-              <dl class="wcard__meta">
-                <div><dt>施工エリア</dt><dd>北九州市および周辺地域</dd></div>
-                <div><dt>工事概要</dt><dd>建物の内装や設備の解体を、周辺環境と安全に配慮しながら進めます。</dd></div>
-              </dl>
-            </article>
-          </li>
-          <li data-cat="各種プラント工事">
-            <article class="wcard" aria-label="施工事例（各種プラント工事）">
-              <div class="wcard__ph"><span class="wcard__badge">掲載準備中</span><span class="wcard__phlabel">PHOTO</span></div>
-              <p class="wcard__tags"><span class="wcard__cat">各種プラント工事</span></p>
-              <h2 class="wcard__title">既設プラント設備の改修工事</h2>
-              <dl class="wcard__meta">
-                <div><dt>施工エリア</dt><dd>北九州市および周辺地域</dd></div>
-                <div><dt>工事概要</dt><dd>稼働中の設備にも配慮しながら、既設プラント設備の改修を進める工事です。</dd></div>
-              </dl>
-            </article>
-          </li>
-          <li data-cat="機械基部設置工事">
-            <article class="wcard" aria-label="施工事例（機械基部設置工事）">
-              <div class="wcard__ph"><span class="wcard__badge">掲載準備中</span><span class="wcard__phlabel">PHOTO</span></div>
-              <p class="wcard__tags"><span class="wcard__cat">機械基部設置工事</span></p>
-              <h2 class="wcard__title">大型機械・重量物の据付、運搬</h2>
-              <dl class="wcard__meta">
-                <div><dt>施工エリア</dt><dd>北九州市および周辺地域</dd></div>
-                <div><dt>工事概要</dt><dd>大型機械や重量物の運搬と据付を、現場の状況に応じて安全に行います。</dd></div>
-              </dl>
-            </article>
-          </li>
-          <li data-cat="機械メンテナンス工事">
-            <article class="wcard" aria-label="施工事例（機械メンテナンス工事）">
-              <div class="wcard__ph"><span class="wcard__badge">掲載準備中</span><span class="wcard__phlabel">PHOTO</span></div>
-              <p class="wcard__tags"><span class="wcard__cat">機械メンテナンス工事</span></p>
-              <h2 class="wcard__title">機械設備の定期点検・整備</h2>
-              <dl class="wcard__meta">
-                <div><dt>施工エリア</dt><dd>北九州市および周辺地域</dd></div>
-                <div><dt>工事概要</dt><dd>定期的な点検と整備で不具合を早めに見つけ、設備を長く使える状態に保ちます。</dd></div>
-              </dl>
-            </article>
-          </li>
-          <li data-cat="鍛冶工事一式">
-            <article class="wcard" aria-label="施工事例（鍛冶工事一式）">
-              <div class="wcard__ph"><span class="wcard__badge">掲載準備中</span><span class="wcard__phlabel">PHOTO</span></div>
-              <p class="wcard__tags"><span class="wcard__cat">鍛冶工事一式</span></p>
-              <h2 class="wcard__title">配管架台などの製作、取付</h2>
-              <dl class="wcard__meta">
-                <div><dt>施工エリア</dt><dd>北九州市および周辺地域</dd></div>
-                <div><dt>工事概要</dt><dd>設備まわりの配管架台や金物を製作し、現場に取り付ける工事です。</dd></div>
-              </dl>
-            </article>
-          </li>
-          <li data-cat="足場工事一式">
-            <article class="wcard" aria-label="施工事例（足場工事一式）">
-              <div class="wcard__ph"><span class="wcard__badge">掲載準備中</span><span class="wcard__phlabel">PHOTO</span></div>
-              <p class="wcard__tags"><span class="wcard__cat">足場工事一式</span></p>
-              <h2 class="wcard__title">設備まわりの足場工事</h2>
-              <dl class="wcard__meta">
-                <div><dt>施工エリア</dt><dd>北九州市および周辺地域</dd></div>
-                <div><dt>工事概要</dt><dd>設備まわりの作業に合わせた足場を計画し、安全に組み立てる工事です。</dd></div>
-              </dl>
-            </article>
-          </li>
-          <li data-cat="解体工事一式">
-            <article class="wcard" aria-label="施工事例（解体工事一式）">
-              <div class="wcard__ph"><span class="wcard__badge">掲載準備中</span><span class="wcard__phlabel">PHOTO</span></div>
-              <p class="wcard__tags"><span class="wcard__cat">解体工事一式</span></p>
-              <h2 class="wcard__title">機械設備の移設・撤去・解体</h2>
-              <dl class="wcard__meta">
-                <div><dt>施工エリア</dt><dd>北九州市および周辺地域</dd></div>
-                <div><dt>工事概要</dt><dd>不要になった機械設備の移設・撤去・解体を行い、次の工程につなげます。</dd></div>
-              </dl>
-            </article>
-          </li>
-      </ul>
-      <p class="works-note">※ 掲載内容は施工内容の一例です。写真は準備ができ次第、順次掲載します。</p>
+      <div class="filter" hidden role="group" aria-label="工事の種類で絞り込む"><button type="button" data-filter="all" aria-pressed="true">すべて<span class="count">12</span></button><button type="button" data-filter="各種プラント工事" aria-pressed="false">各種プラント工事<span class="count">2</span></button><button type="button" data-filter="機械器具設置工事" aria-pressed="false">機械器具設置工事<span class="count">2</span></button><button type="button" data-filter="機械メンテナンス工事" aria-pressed="false">機械メンテナンス工事<span class="count">2</span></button><button type="button" data-filter="鍛冶工事一式" aria-pressed="false">鍛冶工事一式<span class="count">2</span></button><button type="button" data-filter="足場工事一式" aria-pressed="false">足場工事一式<span class="count">2</span></button><button type="button" data-filter="解体工事一式" aria-pressed="false">解体工事一式<span class="count">2</span></button></div>
+      <p class="works-status" hidden aria-live="polite"><span data-status>すべて：12件</span></p>
+      <ul class="works-grid" hidden></ul>
+      <div class="works-soon" role="status"><p class="works-soon__en">Coming Soon</p><p class="works-soon__text">施工事例は現在準備中です</p><p class="works-soon__sub">掲載できる内容がそろい次第、こちらでご紹介します。</p></div>
     </div>
   </section>
 
@@ -584,6 +456,8 @@ ul{list-style:none}
     }).join('');
     fbtns.forEach(function(b){ var f=b.getAttribute('data-filter'), c=b.querySelector('.count'); if(c) c.textContent=f==='all'?items.length:(counts[f]||0); });
     if(note) note.hidden=true;
+    var soon=document.querySelector('.works-soon'); if(soon) soon.remove();
+    [document.querySelector('.filter'),document.querySelector('.works-status'),grid].forEach(function(e){ if(e) e.hidden=false; });
     applyFilter(fbtns[0]);
   }
   if(window.fetch){
